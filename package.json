@@ -1,7 +1,7 @@
 {
-  "name": "garlicore-lib",
+  "name": "tuxcore-lib",
   "version": "0.1.4",
-  "description": "A pure and powerful JavaScript Litecoin library.",
+  "description": "A pure and powerful JavaScript Tuxcoin library.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "build": "gulp"
   },
   "keywords": [
-    "garlicoin",
+    "tuxcoin",
     "bitcoin",
     "transaction",
     "address",
@@ -29,7 +29,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/garlicoin-project/garlicore-lib.git"
+    "url": "https://github.com/Wuzado/tuxcore-lib.git"
   },
   "browser": {
     "request": "browser-request"
@@ -47,7 +47,7 @@
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
     "gulp": "^3.9.1",
-    "garlicore-build": "garlicoin-project/garlicore-build",
+    "tuxcore-build": "tuxcoin-project/tuxcore-build",
     "sinon": "^1.13.0"
   },
   "license": "MIT"

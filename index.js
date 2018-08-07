@@ -1,70 +1,70 @@
 'use strict';
 
-var garlicore = module.exports;
+var tuxcore = module.exports;
 
 // module information
-garlicore.version = 'v' + require('./package.json').version;
-garlicore.versionGuard = function(version) {
+tuxcore.version = 'v' + require('./package.json').version;
+tuxcore.versionGuard = function(version) {
   if (version !== undefined) {
-    var message = 'More than one instance of garlicore-lib found. ' +
-      'Please make sure to require garlicore-lib and check that submodules do' +
-      ' not also include their own garlicore-lib dependency.';
+    var message = 'More than one instance of tuxcore-lib found. ' +
+      'Please make sure to require tuxcore-lib and check that submodules do' +
+      ' not also include their own tuxcore-lib dependency.';
     throw new Error(message);
   }
 };
-garlicore.versionGuard(global._garlicore);
-global._garlicore = garlicore.version;
+tuxcore.versionGuard(global._tuxcore);
+global._tuxcore = tuxcore.version;
 
 // crypto
-garlicore.crypto = {};
-garlicore.crypto.BN = require('./lib/crypto/bn');
-garlicore.crypto.ECDSA = require('./lib/crypto/ecdsa');
-garlicore.crypto.Hash = require('./lib/crypto/hash');
-garlicore.crypto.Random = require('./lib/crypto/random');
-garlicore.crypto.Point = require('./lib/crypto/point');
-garlicore.crypto.Signature = require('./lib/crypto/signature');
+tuxcore.crypto = {};
+tuxcore.crypto.BN = require('./lib/crypto/bn');
+tuxcore.crypto.ECDSA = require('./lib/crypto/ecdsa');
+tuxcore.crypto.Hash = require('./lib/crypto/hash');
+tuxcore.crypto.Random = require('./lib/crypto/random');
+tuxcore.crypto.Point = require('./lib/crypto/point');
+tuxcore.crypto.Signature = require('./lib/crypto/signature');
 
 // encoding
-garlicore.encoding = {};
-garlicore.encoding.Base58 = require('./lib/encoding/base58');
-garlicore.encoding.Base58Check = require('./lib/encoding/base58check');
-garlicore.encoding.BufferReader = require('./lib/encoding/bufferreader');
-garlicore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
-garlicore.encoding.Varint = require('./lib/encoding/varint');
+tuxcore.encoding = {};
+tuxcore.encoding.Base58 = require('./lib/encoding/base58');
+tuxcore.encoding.Base58Check = require('./lib/encoding/base58check');
+tuxcore.encoding.BufferReader = require('./lib/encoding/bufferreader');
+tuxcore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
+tuxcore.encoding.Varint = require('./lib/encoding/varint');
 
 // utilities
-garlicore.util = {};
-garlicore.util.buffer = require('./lib/util/buffer');
-garlicore.util.js = require('./lib/util/js');
-garlicore.util.preconditions = require('./lib/util/preconditions');
+tuxcore.util = {};
+tuxcore.util.buffer = require('./lib/util/buffer');
+tuxcore.util.js = require('./lib/util/js');
+tuxcore.util.preconditions = require('./lib/util/preconditions');
 
 // errors thrown by the library
-garlicore.errors = require('./lib/errors');
+tuxcore.errors = require('./lib/errors');
 
 // main bitcoin library
-garlicore.Address = require('./lib/address');
-garlicore.Block = require('./lib/block');
-garlicore.MerkleBlock = require('./lib/block/merkleblock');
-garlicore.BlockHeader = require('./lib/block/blockheader');
-garlicore.HDPrivateKey = require('./lib/hdprivatekey.js');
-garlicore.HDPublicKey = require('./lib/hdpublickey.js');
-garlicore.Networks = require('./lib/networks');
-garlicore.Opcode = require('./lib/opcode');
-garlicore.PrivateKey = require('./lib/privatekey');
-garlicore.PublicKey = require('./lib/publickey');
-garlicore.Script = require('./lib/script');
-garlicore.Transaction = require('./lib/transaction');
-garlicore.URI = require('./lib/uri');
-garlicore.Unit = require('./lib/unit');
+tuxcore.Address = require('./lib/address');
+tuxcore.Block = require('./lib/block');
+tuxcore.MerkleBlock = require('./lib/block/merkleblock');
+tuxcore.BlockHeader = require('./lib/block/blockheader');
+tuxcore.HDPrivateKey = require('./lib/hdprivatekey.js');
+tuxcore.HDPublicKey = require('./lib/hdpublickey.js');
+tuxcore.Networks = require('./lib/networks');
+tuxcore.Opcode = require('./lib/opcode');
+tuxcore.PrivateKey = require('./lib/privatekey');
+tuxcore.PublicKey = require('./lib/publickey');
+tuxcore.Script = require('./lib/script');
+tuxcore.Transaction = require('./lib/transaction');
+tuxcore.URI = require('./lib/uri');
+tuxcore.Unit = require('./lib/unit');
 
 // dependencies, subject to change
-garlicore.deps = {};
-garlicore.deps.bnjs = require('bn.js');
-garlicore.deps.bs58 = require('bs58');
-garlicore.deps.Buffer = Buffer;
-garlicore.deps.elliptic = require('elliptic');
-garlicore.deps.scryptsy = require('scryptsy');
-garlicore.deps._ = require('lodash');
+tuxcore.deps = {};
+tuxcore.deps.bnjs = require('bn.js');
+tuxcore.deps.bs58 = require('bs58');
+tuxcore.deps.Buffer = Buffer;
+tuxcore.deps.elliptic = require('elliptic');
+tuxcore.deps.scryptsy = require('scryptsy');
+tuxcore.deps._ = require('lodash');
 
 // Internal usage, exposed for testing/advanced tweaking
-garlicore.Transaction.sighash = require('./lib/transaction/sighash');
+tuxcore.Transaction.sighash = require('./lib/transaction/sighash');
