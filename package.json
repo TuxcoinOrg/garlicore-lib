@@ -47,7 +47,7 @@
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
     "gulp": "^3.9.1",
-    "tuxcore-build": "tuxcoin-project/tuxcore-build",
+    "tuxcore-build": "TuxcoinOrg/tuxcore-build",
     "sinon": "^1.13.0"
   },
   "license": "MIT"
