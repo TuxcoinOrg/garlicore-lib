@@ -246,8 +246,8 @@ git checkout -b remove/some-file
 
 We expect pull requests to be rebased to the master branch before merging:
 ```sh
-git remote add Wuzado git@github.com:Wuzado/tuxcore.git
-git pull --rebase Wuzado master
+git remote add TuxcoinOrg git@github.com:TuxcoinOrg/tuxcore-lib.git
+git pull --rebase TuxcoinOrg master
 ```
 
 Note that we require rebasing your branch instead of merging it, for commit readability reasons.
@@ -258,11 +258,11 @@ git push origin your_branch_name
 git push origin feature/some-new-stuff
 git push origin fix/some-bug
 ```
-Finally go to [github.com/Wuzado/tuxcore](https://github.com/Wuzado/tuxcore-lib) in your web browser and issue a new pull request.
+Finally go to [github.com/TuxcoinOrg/tuxcore-lib](https://github.com/TuxcoinOrg/tuxcore-lib) in your web browser and issue a new pull request.
 
 Main contributors will review your code and possibly ask for changes before your code is pulled in to the main repository.  We'll check that all tests pass, review the coding style, and check for general code correctness. If everything is OK, we'll merge your pull request and your code will be part of tuxcore.
 
 If you have any questions feel free to post them to
-[github.com/Wuzado/tuxcore/issues](https://github.com/Wuzado/tuxcore-lib/issues).
+[github.com/TuxcoinOrg/tuxcore-lib/issues](https://github.com/TuxcoinOrg/tuxcore-lib/issues).
 
 Thanks for your time and code!

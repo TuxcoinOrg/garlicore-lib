@@ -2,7 +2,7 @@
   "name": "tuxcore-lib",
   "main": "./tuxcore-lib.min.js",
   "version": "0.13.19",
-  "homepage": "https://github.com/Wuzado/tuxcore-lib",
+  "homepage": "https://github.com/TuxcoinOrg/tuxcore-lib",
   "authors": [
     "BitPay, Inc."
   ],
